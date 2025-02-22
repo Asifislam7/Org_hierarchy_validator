@@ -15,4 +15,4 @@ This Angular application provides a user interface to upload an organization hie
 - **Error Reporting**: Displays errors for violations of the hierarchy rules.
 
 ## 📌 Live Demo
-[Click here to see the live demo](https://orgchart-a4yy107hd-syedasif9072gmailcoms-projects.vercel.app)
+[Click here to see the live demo](https://orgchart-gules.vercel.app/)
