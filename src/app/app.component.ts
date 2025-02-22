@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { OrganizationValidatorComponent } from './components/organization-validator.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `
+    <app-organization-validator></app-organization-validator>
+  `,
+  standalone: true,
+  imports: [OrganizationValidatorComponent]
 })
 export class AppComponent {
-  title = 'assignment';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
 }
