@@ -13,16 +13,16 @@ export class FileParserService {
       reader.onload = (e: any) => {
         try {
           const data = new Uint8Array(e.target.result); 
-          const workbook = XLSX.read(data, { type: 'array' }); //fetching the workbook of the excel file
-          const firstSheetName = workbook.SheetNames[0]; //fetching the first sheet name
-          const worksheet = workbook.Sheets[firstSheetName]; //fetching the first sheet
-          const employees: Employee[] = XLSX.utils.sheet_to_json(worksheet); //converting the sheet to json
+          const workbook = XLSX.read(data, { type: 'array' }); 
+          const firstSheetName = workbook.SheetNames[0]; 
+          const worksheet = workbook.Sheets[firstSheetName]; 
+          const employees: Employee[] = XLSX.utils.sheet_to_json(worksheet); 
           resolve(employees); 
         } catch (error) {
           reject(new Error('Failed to parse Excel file'));
         }
       };
-      reader.readAsArrayBuffer(file); //reading the file as an array buffer
+      reader.readAsArrayBuffer(file); 
     });
   }
 }
